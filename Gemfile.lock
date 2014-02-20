@@ -29,6 +29,7 @@ GEM
       httparty (>= 0.7.7)
     arel (4.0.1)
     atomic (1.1.14)
+    awesome_print (1.2.0)
     better_errors (1.0.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -52,6 +53,8 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.0)
     execjs (2.0.2)
+    faker (1.2.0)
+      i18n (~> 0.5)
     haml (4.0.4)
       tilt
     haml-rails (0.4)
@@ -85,6 +88,9 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.3)
       pry (~> 0.9.10)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -145,17 +151,20 @@ PLATFORMS
 
 DEPENDENCIES
   ap
+  awesome_print
   better_errors
   binding_of_caller
   bootstrap-sass
   coffee-rails
   crack
+  faker
   haml-rails
   hirb
   jquery-rails
   pg
   pry
   pry-nav
+  pry-remote
   rails
   rails_12factor
   sass-rails

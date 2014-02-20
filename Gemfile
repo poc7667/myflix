@@ -25,3 +25,10 @@ end
 gem 'hirb'
 gem 'crack'
 gem 'ap'
+gem 'awesome_print'
+
+gem 'faker'
+
+gem 'pry'
+gem 'pry-remote'
+gem 'pry-nav'
