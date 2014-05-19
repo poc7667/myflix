@@ -6,6 +6,8 @@ namespace :import do
     require 'ap'
     require 'pry'
 
+    Video.destroy_all      
+
     movies = []
     get_movie_list(movies)
     get_covers(movies)
@@ -41,11 +43,9 @@ namespace :import do
       cover.gsub( /(.*?\/)(.*)/, '\2') 
     end
     movies.each do |movie|
-      ap(movie)  
-      ap(Faker::Lorem.paragraphs(2..8).join(''))
       cover_fname = covers.sample
-      small_cover_path = "#{_prefix_path}/small/#{cover_fname}"
-      large_cover_path = "#{_prefix_path}/large/#{cover_fname}"
+      small_cover_path = "/tmp/small/#{cover_fname}"
+      large_cover_path = "/tmp/large/#{cover_fname}"
       Video.create(
         title: movie,
         description: Faker::Lorem.paragraphs(2..8).join(''),
